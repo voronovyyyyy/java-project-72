@@ -1,0 +1,10 @@
+.git
+.idea
+.tools
+**/.gradle
+**/build
+**/node_modules
+**/jte-classes
+app/src/main/resources/static/css/main.css
+.env
+.env.*

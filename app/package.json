@@ -1,0 +1,17 @@
+{
+  "name": "page-analyzer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss --input assets/css/source.css --output src/main/resources/static/css/main.css --minify",
+    "watch:css": "tailwindcss --input assets/css/source.css --output src/main/resources/static/css/main.css --watch",
+    "dev": "concurrently --kill-others --names css,app \"npm run watch:css\" \"npm run dev:app\"",
+    "dev:app": "node scripts/start.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "@tailwindcss/forms": "^0.5.10",
+    "tailwindcss": "^4.1.0",
+    "concurrently": "^9.2.0"
+  }
+}
