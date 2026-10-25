@@ -39,7 +39,6 @@ public final class UrlRepository extends BaseRepository {
     }
 
     private static Optional<Url> findBy(String column, Object value) throws SQLException {
-        // The column is selected only by the two methods above; values are parameters.
         var sql = "SELECT id, name, created_at FROM urls WHERE " + column + " = ?";
         try (var connection = dataSource.getConnection();
                 var statement = connection.prepareStatement(sql)) {

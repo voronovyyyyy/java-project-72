@@ -44,8 +44,6 @@ public final class App {
         LOG.info("Mode: {}", development ? "development (source files)" : "production (classpath)");
         return Javalin.create(
                 config -> {
-                    // Use Javalin's classpath handler for consistent resource paths on Windows and
-                    // Linux.
                     config.resourceHandler(new JavalinStaticResourceHandler());
                     if (development) {
                         config.bundledPlugins.enableDevLogging();

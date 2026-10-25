@@ -53,7 +53,6 @@ public final class UrlController {
         try {
             UrlRepository.save(url);
         } catch (SQLException exception) {
-            // A concurrent request can insert the same normalized name first.
             if (!"23505".equals(exception.getSQLState())) {
                 throw exception;
             }

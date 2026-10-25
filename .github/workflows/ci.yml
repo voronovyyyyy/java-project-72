@@ -27,8 +27,6 @@ jobs:
       - name: Check formatting, run tests and require 80% coverage
         working-directory: app
         run: ./gradlew check jacocoTestReport shadowJar
-      - name: Report coverage
-        run: python3 scripts/coverage.py app/build/reports/jacoco/test/jacocoTestReport.xml >> "$GITHUB_STEP_SUMMARY"
       - name: Upload test and coverage reports
         if: always()
         uses: actions/upload-artifact@v4
