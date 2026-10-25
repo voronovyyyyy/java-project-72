@@ -11,7 +11,6 @@
         <tr>
             <th class="border border-gray-200 p-3">ID</th>
             <th class="border border-gray-200 p-3">Имя</th>
-            <th class="border border-gray-200 p-3">Дата создания</th>
             <th class="border border-gray-200 p-3">Последняя проверка</th>
             <th class="border border-gray-200 p-3">Код ответа</th>
         </tr>
@@ -23,7 +22,6 @@
                 <td class="border border-gray-200 p-3">
                     <a class="text-blue-600 hover:underline" href="${NamedRoutes.urlPath(item.url().getId())}">${item.url().getName()}</a>
                 </td>
-                <td class="whitespace-nowrap border border-gray-200 p-3">${ViewUtils.formatDate(item.url().getCreatedAt())}</td>
                 <td class="whitespace-nowrap border border-gray-200 p-3">${ViewUtils.formatDate(item.checkedAt())}</td>
                 <td class="border border-gray-200 p-3">${item.statusCode() == null ? "" : item.statusCode().toString()}</td>
             </tr>

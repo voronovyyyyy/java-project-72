@@ -36,7 +36,8 @@ class UrlControllerTest extends AppTestSupport {
                     assertThat(rows.get(0).select("a").text()).isEqualTo(second.getName());
                     assertThat(rows.get(1).select("td").last().text()).isEqualTo("200");
                     assertThat(rows.get(1).text()).doesNotContain("201");
-                    assertThat(rows.get(1).select("td").get(3).text()).isNotEmpty();
+                    assertThat(rows.get(1).select("td").get(2).text()).isNotEmpty();
+                    assertThat(rows.get(1).select("td").get(3).text()).isEqualTo("200");
                 });
     }
 
