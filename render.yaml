@@ -7,7 +7,7 @@ services:
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /
-    autoDeployTrigger: commit
+    autoDeployTrigger: checksPass
     envVars:
       - key: APP_ENV
         value: production
@@ -20,5 +20,5 @@ databases:
   - name: page-analyzer-java-72-db
     plan: free
     region: frankfurt
-    databaseName: page_analyzer
-    user: page_analyzer
+    databaseName: page_analyzer_java_72_db
+    user: page_analyzer_java_72_db_user
